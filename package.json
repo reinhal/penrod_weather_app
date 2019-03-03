@@ -1,0 +1,15 @@
+{
+  "name": "penrod_weather_app",
+  "version": "1.0.0",
+  "description": "Weather App for Penrod Offices",
+  "main": "[server.js]",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lisa Reinhardt",
+  "license": "ISC",
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.8.3",
+    "express": "^4.16.4"
+  }
+}
