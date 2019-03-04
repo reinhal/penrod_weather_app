@@ -4,6 +4,7 @@
   "description": "Weather App for Penrod Offices",
   "main": "[server.js]",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lisa Reinhardt",
