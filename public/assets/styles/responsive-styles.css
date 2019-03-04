@@ -1,0 +1,14 @@
+.container {
+    background-color: 'purple';
+    padding: 200px;
+}
+@media only screen and (max-width: 1360px) {
+    .container {
+        padding: 50px 0px 200px 0px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 50px 0px 200px 0px;
+    }
+}
