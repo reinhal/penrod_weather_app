@@ -7,7 +7,9 @@
     <title>Penrod Weather App</title>
 		<link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
 		<link rel="stylesheet" type="text/css" href="/assets/styles/responsive-styles.css" />
-  </head>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="client.js"></script>
+	</head>
   <body>
 		<div class="container">
 		  <div class="slds-grid slds-wrap">
@@ -161,7 +163,7 @@
 				</div>
 			</div> 
 		</div>
-		<div class="slds-scrollable" style="height: 5rem; width: 24rem;">
+		<div class="slds-scrollable" style="height: 5rem; width: 24rem; display: none">
 			<div class="demo-only" style="height: 640px;">
 				<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
 					<div class="slds-modal__container">
@@ -181,8 +183,6 @@
 								ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
 						</div>
 						<footer class="slds-modal__footer">
-							<button class="slds-button slds-button_neutral">Cancel</button>
-							<button class="slds-button slds-button_brand">Save</button>
 						</footer>
 					</div>
 				</section>
