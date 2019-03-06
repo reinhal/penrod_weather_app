@@ -46,7 +46,9 @@ function handleGetWeather (res) {
         $.ajax({
             "url": API_BASE_URL + location + '&APPID=' + API_KEY,
             "method": "GET",
-            "success":  console.log('success', res)
+            "success":  function(res) {
+                console.log('success', res)
+            }
         });
     });
 }
