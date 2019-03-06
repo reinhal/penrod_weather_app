@@ -143,52 +143,53 @@
 				</div>
 				<div class="slds-large-size_1-of-4 slds-medium-size_4-of-4" style='margin:auto'>
 					<div class="slds-box slds-box_large slds-text-align_center slds-m-around_large" style='border: none; padding: 20px 0px 0px 0px; margin: 20px 0px 0px 0px'>
-						<button class="slds-button slds-button_neutral">Milwaukee, WI</button>
+						<button class="slds-button slds-button_neutral city-button" value="Milwaukee">Milwaukee, WI</button>
 					</div>
 				</div>
 				<div class="slds-large-size_1-of-4 slds-medium-size_4-of-4" style='margin:auto'>
 					<div class="slds-box slds-box_large slds-text-align_center slds-m-around_large" style='border: none; padding: 20px 0px 0px 0px; margin: 20px 0px 0px 0px'>
-						<button class="slds-button slds-button_neutral">Chicago, IL</button>
+						<button class="slds-button slds-button_neutral city-button" value="Chicago">Chicago, IL</button>
 					</div>
 				</div>
 				<div class="slds-large-size_1-of-4 slds-medium-size_4-of-4" style='margin:auto'>
 					<div class="slds-box slds-box_large slds-text-align_center slds-m-around_large" style='border: none; padding: 20px 0px 0px 0px; margin: 20px 0px 0px 0px'>
-						<button class="slds-button slds-button_neutral">Minneapolis, MN</button>
+						<button class="slds-button slds-button_neutral city-button" value="Minneapolis">Minneapolis, MN</button>
 					</div>
 				</div>
 				<div class="slds-large-size_1-of-4 slds-medium-size_4-of-4" style='margin:auto'>
 					<div class="slds-box slds-box_large slds-text-align_center slds-m-around_large" style='border: none; padding: 20px 0px 0px 0px; margin: 20px 0px 0px 0px'>
-						<button class="slds-button slds-button_neutral">Dallas, TX</button>
+						<button class="slds-button slds-button_neutral city-button"value="Dallas">Dallas, TX</button>
 					</div>
 				</div>
 			</div> 
 		</div>
 		<div class="weather-container">
 			<div class="slds-grid slds-wrap">
-				<div class="slds-size_2-of-4">
+				<div class="slds-size_4-of-4 weather-div">
 					<article class="slds-card weather-card">
 						<div class="slds-card__header slds-grid">
 							<header class="slds-media slds-media_center slds-has-flexi-truncate">
 								<div class="slds-media__figure">
-									<!-- <span class="slds-icon_container slds-icon-standard-account" title="account">
-										<svg class="slds-icon slds-icon_small" aria-hidden="true">
-											<use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
-										</svg>
-										<span class="slds-assistive-text">account</span>
-									</span> -->
 								</div>
-							<div class="slds-media__body">
-								<h2 class="slds-card__header-title card-header">
-									<a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
-										<span>Milwaukee Weather</span>
-									</a>
-								</h2>
+							<div class="slds-media__body" style="position: relative;">
+								<h2 class="slds-card__header-title card-header" style="text-align: center; padding-top: 25px;">Weather at the Milwaukee Penrod Offices</h2>
+								<div class="button-div">
+									<button class="slds-button slds-button_neutral close-button">Close</button>
+								</div>
 							</div>
 						</header>
 					</div>
-					<div class="slds-card__body slds-card__body_inner">
-						<div class="slds-no-flex">
-							<button class="slds-button slds-button_neutral">Close</button>
+					<hr>
+					<div class="slds-card__body slds-card__body_inner slds-grid slds-wrap">
+						<div class="slds-no-flex slds-size_1-of-3 icon-div">
+							<img class="weather-icon" src="/IBMWeatherIcons_v1/icon36.png">
+						</div>
+						<div class="weather-info slds-size_2-of-3 weather-details">
+							<h3 class="weather-title">17˚ F | Super Cold</h3>
+							<ul>
+								<li>Max / Min Temp: 20˚ / 7˚ F</li>
+								<li>Humidity: 46%</li>
+							</ul>
 						</div>
 					</div>
 				</article>

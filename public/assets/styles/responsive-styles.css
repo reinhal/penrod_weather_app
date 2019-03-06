@@ -9,17 +9,43 @@
     background-attachment: fixed;
     background-size: cover;
     height: 1000px;
-    display: flex;
+}
+
+.weather-div {
+    padding: 100px;
+    margin: auto;
+    width: 100%;
 }
 
 .weather-card {
-    width: 500px;
-    justify-content: center;
+    max-width: 600px;
+    margin: auto;
 }
 
-/* .card-header {
-   margin-top: 200px;
-} */
+.button-div {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.icon-div {
+    width: 33%;
+    margin-right: 0;
+}
+
+.weather-icon {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+.weather-details {
+    padding-left: 35px;
+}
+.weather-title {
+    text-align: jusitfy;
+    font-size: 24px;
+    padding: 25px 0px 15px 0px;
+}
 
 @media only screen and (max-width: 1360px) {
     .container {
