@@ -38,7 +38,7 @@
     margin-right: 0;
 }
 
-.weather-icon {
+#icon {
     width: 100%;
     max-width: 150px;
     height: auto;

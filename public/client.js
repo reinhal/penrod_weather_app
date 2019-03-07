@@ -23,7 +23,7 @@ function displayWeather (weather, temp, min, max) {
             '<hr>' +
             '<div class="slds-card__body slds-card__body_inner slds-grid slds-wrap">' +
                 '<div class="slds-no-flex slds-size_1-of-3 icon-div">' +
-                    '<img class="weather-icon" src="/IBMWeatherIcons_v1/icon36.png">' +
+                    '<img class="weather-icon" id="icon" src="/IBMWeatherIcons_v1/icon36.png">' +
                 '</div>' +
                 '<div class="weather-info slds-size_2-of-3 weather-details">' +
                     '<h3 class="weather-title">' + temp +'˚ F | ' + weather.weather[0].main +'</h3>' +
@@ -58,6 +58,20 @@ function getBackgroundPicture(weather) {
     }
 }
 
+function getWeatherIcon(weather) {
+    if (weather.weather[0].main == 'Clear') {
+        document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon36.png";
+    } else if (weather.weather[0].main == 'Rain') {
+        document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon9.png";
+    } else if (weather.weather[0].main == 'Cloudy') {
+        document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon26.png";
+    } else if (weather.weather[0].main == 'Snow') {
+        document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon42.png";
+    } else if (weather.weather[0].main == 'Snow') {
+        document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon24.png";
+    }
+}
+
 
 function handleGetWeather() {
     $('.city-button').click(function(e) {
@@ -77,6 +91,7 @@ function handleGetWeather() {
                     return displayWeather(weather, temp, min, max);
                 });
                 $('.container').addClass('hide');
+                getWeatherIcon(weather);
             }
         });
     });
