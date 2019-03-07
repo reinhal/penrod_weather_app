@@ -1,6 +1,6 @@
 # Penrod Weather App
 
-A project for the pruposed of showing my skillset. 
+A simple app displaying current weather conditions at the four Penrod offices. 
 
 ## Technology Used
 
