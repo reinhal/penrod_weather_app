@@ -1,7 +1,9 @@
 'use strict';
 
-const API_BASE_URL= 'https://api.openweathermap.org/data/2.5/weather?q=';
-const API_KEY = "b9269a56aa1a4f25631ef8fca2ac5132"; // this should be hidden and secure
+// const API_BASE_URL= 'https://api.openweathermap.org/data/2.5/weather?q=';
+// const API_KEY = "b9269a56aa1a4f25631ef8fca2ac5132"; // this should be hidden and secure
+
+let weatherURL = '/';
 
 function displayWeather (weather, temp, min, max) {
     return '<div class="weather-container">' +
@@ -72,32 +74,40 @@ function getWeatherIcon(weather) {
     }
 }
 
-
-function handleGetWeather() {
+function handleGetLocation() {
     $('.city-button').click(function(e) {
         e.preventDefault();
         let location = $(this).val();
+        console.log(location);
         document.getElementById('background').style.display = "block";
-        $.ajax({
-            "url": API_BASE_URL + location + '&units=imperial&APPID=' + API_KEY,
-            "method": "GET",
-            "success":  function(res) {
-                let weather = res;
-                getBackgroundPicture(weather);
-                $(".weather-results").empty().append(function () {
-                    let temp = Math.ceil(weather.main.temp);
-                    let min = Math.ceil(weather.main.temp_min);
-                    let max = Math.ceil(weather.main.temp_max);
-                    return displayWeather(weather, temp, min, max);
-                });
-                $('.container').addClass('hide');
-                getWeatherIcon(weather);
-            }
-        });
+        getWeather(location);
+    });
+}
+
+
+function getWeather(location) {
+    $.ajax({
+        "url": weatherURL,
+        // "url": API_BASE_URL + location + '&units=imperial&APPID=' + API_KEY,
+        "method": "GET",
+        "data": JSON.stringify({location}),
+        "success":  function(res) {
+            let weather = res;
+            getBackgroundPicture(weather);
+            $(".weather-results").empty().append(function () {
+                let temp = Math.ceil(weather.main.temp);
+                let min = Math.ceil(weather.main.temp_min);
+                let max = Math.ceil(weather.main.temp_max);
+                return displayWeather(weather, temp, min, max);
+            });
+            $('.container').addClass('hide');
+            getWeatherIcon(weather);
+        }
     });
 }
 
 $(function() {
-    handleGetWeather();
+    handleGetLocation();
+    getWeather();
     closeWeatherDisplay();
 });
