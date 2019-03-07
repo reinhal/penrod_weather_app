@@ -13,7 +13,7 @@ function displayWeather (weather, temp, min, max) {
                         '<div class="slds-media__figure">' +
                         '</div>' +
                     '<div class="slds-media__body" style="position: relative;">' +
-                        '<h2 class="slds-card__header-title card-header" style="font-weight: bold; text-align: center; padding-top: 25px;">Weather at the ' + weather.name + ' Penrod Offices</h2>' +
+                        '<h2 class="slds-card__header-title card-header">Weather at the ' + weather.name + ' Penrod Offices</h2>' +
                         '<div class="button-div">' +
                             '<button class="slds-button slds-button_neutral close-button" onClick="closeWeatherDisplay()">Close</button>' +
                         '</div>' +
@@ -67,7 +67,7 @@ function getWeatherIcon(weather) {
         document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon26.png";
     } else if (weather.weather[0].main == 'Snow') {
         document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon42.png";
-    } else if (weather.weather[0].main == 'Snow') {
+    } else if (weather.weather[0].main == 'Windy') {
         document.getElementById('icon').src = "/IBMWeatherIcons_v1/icon24.png";
     }
 }
