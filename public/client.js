@@ -3,7 +3,7 @@
 // const API_BASE_URL= 'https://api.openweathermap.org/data/2.5/weather?q=';
 // const API_KEY = "b9269a56aa1a4f25631ef8fca2ac5132"; // this should be hidden and secure
 
-let weatherURL = '/weather';
+let weatherURL = '/weather/:location';
 
 function displayWeather (weather, temp, min, max) {
     return '<div class="weather-container">' +
