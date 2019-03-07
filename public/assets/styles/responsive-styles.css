@@ -1,14 +1,19 @@
+
 .container {
     background-color: 'purple';
     padding: 200px;
     height: 100%;
 }
-.weather-container {
-    background-image: url("/city-images/milwaukee.jpg");
+#background {
+    /* background-image: url("/city-images/milwaukee.jpg"); */
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     height: 1000px;
+}
+
+.hide {
+    display: none;
 }
 
 .weather-div {
