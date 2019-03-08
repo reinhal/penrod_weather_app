@@ -4,9 +4,9 @@ const port = process.env.PORT || 8080;
 const fetch = require("node-fetch");
 const { API_BASE_URL, API_KEY} = require('./config');
 
-app.get('/weather/:location', (req, res) => {
+app.get('/weather', (req, res, location) => {
     console.log(location);
-    let API_URL = API_BASE_URL + req.param.location + '&units=imperial&APPID=' + API_KEY;
+    let API_URL = API_BASE_URL + location + '&units=imperial&APPID=' + API_KEY;
     fetch(API_URL)
     .then(res => res.json())
     .then(data => {
@@ -17,6 +17,7 @@ app.get('/weather/:location', (req, res) => {
     .catch(err => {
         res.redirect('/error');
     });
+    console.log(res);
 });
 
 // Serve static files
