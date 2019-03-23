@@ -85,14 +85,14 @@ function handleGetLocation() {
 }
 
 
-function getWeather(location) {
+function getWeather() {
     $.ajax({
-        "url": weatherURL,
+        url: weatherURL,
         // "url": API_BASE_URL + location + '&units=imperial&APPID=' + API_KEY,
-        "method": "GET",
-        "data": JSON.stringify({location}),
-        "success":  function(res) {
-            let weather = res;
+        method: 'GET',
+        success:  function(data) {
+            console.log(data);
+            let weather = data;
             getBackgroundPicture(weather);
             $(".weather-results").empty().append(function () {
                 let temp = Math.ceil(weather.main.temp);
@@ -102,7 +102,9 @@ function getWeather(location) {
             });
             $('.container').addClass('hide');
             getWeatherIcon(weather);
-        }
+        },
+        dataType: 'json',
+        contentType: 'application/json'
     });
 }
 
